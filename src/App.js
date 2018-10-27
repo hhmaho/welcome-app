@@ -1,8 +1,21 @@
 import React from 'react';
-import './App.css';
-import Button from './Component/Button'
+import ReactDOM from 'react-dom';
+import { Contact } from './components/Contact';
 
-const App = () =>
-  <Button />
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>
+          Hello, "Welcome" "Test"
+        </h1>
+        <Greeting name="Marianne" signedIn={true}/>
+        <article>
+          News: Welcome world! 
+        </article>
+      </div>
+    );
+  }
+}
 
-export default App;
+ReactDOM.render(<App />, document.getElementById('app'));
